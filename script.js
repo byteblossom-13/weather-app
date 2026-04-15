@@ -33,18 +33,17 @@ function showStatus(msg, error = false) {
 function setWeatherTheme(weather) {
   weather = weather.toLowerCase();
 
-  if (weather.includes("cloud"))
-    document.body.style.background = "linear-gradient(rgba(107,122,161,.6),rgba(43,58,103,.6)),url('./image/cloudy.jpg') center/cover";
-  else if (weather.includes("rain"))
-    document.body.style.background = "linear-gradient(rgba(31,60,136,.6),rgba(2,6,23,.6)),url('./image/rain.jpg') center/cover";
-  else if (weather.includes("clear"))
-    document.body.style.background = "linear-gradient(rgba(79,195,255,.6),rgba(0,78,146,.6)),url('./image/clear.jpg') center/cover";
-  else if (weather.includes("snow"))
-    document.body.style.background = "linear-gradient(rgba(230,242,255,.6),rgba(163,201,249,.6)),url('./image/snow.jpg') center/cover";
-  else
-    document.body.style.background = "linear-gradient(rgba(15,23,36,.6),rgba(2,6,23,.6)),url('./image/bg.jpg') center/cover";
+ if (weather.includes("cloud"))
+  document.body.style.background = "linear-gradient(rgba(107,122,161,.6),rgba(43,58,103,.6)),url('./cloudy.jpg') center/cover";
+else if (weather.includes("rain"))
+  document.body.style.background = "linear-gradient(rgba(31,60,136,.6),rgba(2,6,23,.6)),url('./rain.jpg') center/cover";
+else if (weather.includes("clear"))
+  document.body.style.background = "linear-gradient(rgba(79,195,255,.6),rgba(0,78,146,.6)),url('./clear.jpg') center/cover";
+else if (weather.includes("snow"))
+  document.body.style.background = "linear-gradient(rgba(230,242,255,.6),rgba(163,201,249,.6)),url('./snow.jpg') center/cover";
+else
+  document.body.style.background = "linear-gradient(rgba(15,23,36,.6),rgba(2,6,23,.6)),url('./bg.jpg') center/cover";
 }
-
 // Weather icon
 function iconUrl(code) {
   return `https://openweathermap.org/img/wn/${code}@2x.png`;
