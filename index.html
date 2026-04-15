@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Live Weather Forecast</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>🌤 Live Weather Forecast 🌦</h1>
+
+    <!-- Search controls -->
+    <section class="controls">
+      <input id="cityInput" type="text" placeholder="Enter city (e.g. London)" />
+      <button id="searchBtn" title="Search for city weather">🔍 Search</button>
+      <button id="locBtn" title="Use your current location">📍 Use My Location</button>
+    </section>
+
+    <!-- Status & loader -->
+    <section id="status" class="status" aria-live="polite"></section>
+    <div id="loader" class="loader hidden"></div>
+
+    <!-- Current Weather Card -->
+    <section id="current" class="current hidden">
+      <div class="current-card">
+        <div class="cur-left">
+          <h2 id="cityName">City, Country</h2>
+          <div id="description" class="description">Clear sky</div>
+          <div class="temp" id="temp">0°C</div>
+          <div class="details">
+            <span id="feels" title="Feels like temperature">Feels: 0°C</span>
+            <span id="humidity" title="Humidity percentage">Humidity: 0%</span>
+            <span id="wind" title="Wind speed in m/s">Wind: 0 m/s</span>
+            <span id="sunrise" title="Sunrise time">🌅 Sunrise: --:--</span>
+            <span id="sunset" title="Sunset time">🌇 Sunset: --:--</span>
+          </div>
+        </div>
+        <div class="cur-right">
+          <img id="icon" src="" alt="Weather Icon" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Forecast Section -->
+    <section id="forecast" class="forecast hidden">
+      <h3>5‑Day Forecast</h3>
+      <div id="forecastCards" class="cards"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      Data from <a href="https://openweathermap.org/" target="_blank" rel="noopener">OpenWeatherMap</a>.
+    </footer>
+
+    <!-- Animated Weather Effects (Optional) -->
+    <div class="weather-animation">
+      <div class="clouds"></div>
+      <div class="rain"></div>
+      <div class="snow"></div>
+    </div>
+  </main>
+
+  <!-- Script -->
+  <script src="script.js" type="module"></script>
+</body>
+</html>
